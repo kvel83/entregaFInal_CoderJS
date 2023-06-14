@@ -1,0 +1,36 @@
+.navbar{
+    background-color: #ECCDB4;
+
+}
+.navText{
+    color: #5e5f56!important;
+}
+
+.main{
+    background-color: #F9FBE7;
+}
+.img{
+    width: 10rem;
+    height: 10rem;
+}
+.cardImg{
+    height: 15rem;
+}
+main{
+    display: grid;
+    grid-template-columns:  12rem auto;
+    grid-template-rows: 2fr auto;
+    grid-template-areas:
+    "nav nav"
+    "aside section"
+;
+}
+nav{
+    grid-area: nav;
+}
+aside{
+    grid-area: aside;
+}
+section{
+    grid-area: section;
+}
