@@ -1,7 +1,9 @@
 const fetchData = async() => {
     try{
         const currentURL = window.location.href;
-        const jsonURL = currentURL.replace(/\/$/, '') + '/assets/data/productosJS.json';
+        const regex = /\/[^/]+$/; // Expresión regular para eliminar la barra final y cualquier carácter que le siga
+        const baseURL = currentURL.replace(regex, '');
+        const jsonURL = `${baseURL}/assets/data/productosJS.json`;
         const response = await fetch(jsonURL);
         if (response.ok){
             const data = await response.json();
