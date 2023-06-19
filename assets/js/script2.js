@@ -1,6 +1,8 @@
 const fetchData = async() => {
     try{
-        const response = await fetch('assets/data/productosJS.json');
+        const currentURL = window.location.href;
+        const jsonURL = currentURL.replace(/\/$/, '') + '/assets/data/productosJS.json';
+        const response = await fetch(jsonURL);
         if (response.ok){
             const data = await response.json();
             return data;
