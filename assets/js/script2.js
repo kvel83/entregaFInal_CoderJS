@@ -1,6 +1,6 @@
 const fetchData = async() => {
     try{
-        const response = await fetch('/assets/data/productosJS.json');
+        const response = await fetch('assets/data/productosJS.json');
         if (response.ok){
             const data = await response.json();
             return data;
